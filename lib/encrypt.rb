@@ -6,11 +6,11 @@ enigma = Enigma.new
 puts "Please enter a phrase,"
 phrase = gets.chomp.downcase
 
-puts "Enter a 6 digit key (optional)"
+puts "Enter a 5 digit key (optional)"
 key = gets.chomp
 
-until key.length == 6 || key.length == 0
-    puts "You need to have 6 digit key or press enter to generate a Key"
+until key.length == 5 || key.length == 0
+    puts "You need to have 5 digit key or press enter to generate a Key"
     key = gets.chomp   
 end
 
