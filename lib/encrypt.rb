@@ -22,16 +22,14 @@ until date.length == 6 && !(date.include?("/")) && !(date.include?("-")) || date
     date = gets.chomp
 end
 
-# if key == "" && date != ""
-#     encrypt = enigma.encrypt(phrase,date)
-# elsif date == "" && key != ""
-#     encrypt = enigma.encrypt(phrase,key)
-# elsif date == "" && key == ""
-#     encrypt = enigma.encrypt(phrase)
-# else
-#     encrypt = enigma.encrypt(phrase,key,date)
-# end
-
-encrypt = enigma.encrypt(phrase,key,date)
+if key == "" && date != ""
+    encrypt = enigma.encrypt(phrase,date)
+elsif date == "" && key != ""
+    encrypt = enigma.encrypt(phrase,key)
+elsif date == "" && key == ""
+    encrypt = enigma.encrypt(phrase)
+else
+    encrypt = enigma.encrypt(phrase,key,date)
+end
 
 puts encrypt
